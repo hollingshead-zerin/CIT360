@@ -1,6 +1,6 @@
 package test;
 
-import java.lang.Thread.*;
+import java.lang.*;
 
 public class Task implements Runnable {
 	   private Thread t;
@@ -11,13 +11,17 @@ public class Task implements Runnable {
 	      System.out.println("Creating " +  threadName );
 	      
 	   }
-	   
+	 
 	   public void run() {
 	      System.out.println("Running " +  threadName );
 	      try {
 	         for(int i = 4; i > 0; i--) {
 	            System.out.println("Thread: " + threadName + ", " + i);
-	            //Thread.sleep(50);
+	           try {
+	        	  Thread.sleep(50);
+	           } catch (InterruptedException e) {
+	        	   System.out.println("Thread has been interrupted");
+	           }
 	         }
 	      }	
 	         finally {
@@ -28,7 +32,11 @@ public class Task implements Runnable {
    
 	   public void start() {
 	      System.out.println("Starting " +  threadName );
-	     
+	      if (t == null) {
+	    	   t = new Thread(this, threadName);
+	    	   t.start();
+	      }
 	   }
 	}
 
+//https://www.guru99.com/multithreading-java.html

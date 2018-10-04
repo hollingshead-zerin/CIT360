@@ -13,17 +13,24 @@ public class collection {
 		//create a list called collectList
 		List<String> collectList = new ArrayList<String>();
 		collectList.add("Java");
-		collectList.add("Unix");
+		collectList.add("Javascript");
+		collectList.add("C++");
+		collectList.add("Powershell");
+		collectList.add("Bash");
+		collectList.add("Python");
+		collectList.add("PLSQL");
 		
-		//create an itorator that will go through the values in list
+		//create an iterator that will go through the values in list
 		Iterator<String> ir = collectList.iterator();
 		 while(ir.hasNext()){
 	            System.out.println(ir.next());
 	        }
-	
+		 System.out.println(collectList.size());
+		
+		 
 		 System.out.println();
 		 
-		 
+//*****************************************************************
 		 //create hashset that contains names 
 		 Set<String> hashSet = new HashSet<>();
 		 
@@ -31,13 +38,21 @@ public class collection {
 		 hashSet.add("Zerin");
 		 hashSet.add("Rachel");
 		 hashSet.add("Sam");
-		 
+		 hashSet.add("Sam");
 		 //print the set
 		 System.out.println(hashSet);
 		 
-		 //hashSet.first();
+		 hashSet.add("Adam");
+		
+		
+		 //hash set is not ordered, but 
+		 System.out.println(hashSet);
+		 System.out.println(hashSet.size());
 		 
+		 hashSet.clear();
+		 System.out.println();
 		 
+//**********************************************************************		 
 		//create a treeset with the same names to show difference
 		TreeSet<String> treeSet = new TreeSet<String>();
 		
@@ -49,37 +64,60 @@ public class collection {
 		treeSet.add("Sam");
 		//find the size of tree set in length
 		int treeSize = treeSet.size();
+		
 		//will print out set in sorted order. not order that was inserted.
 		System.out.println(treeSet);
 		System.out.println(treeSize);
 		
+		treeSet.add("Adam");
+		System.out.println(treeSet);
+		System.out.println(treeSize);
 		//print first in the set
 		System.out.println(treeSet.first());
 		
+		treeSet.clear();
+		
+		
 		System.out.println();
+
 		
+//***************************************************************************
 		//create a map (similar to hashtable) where a key is mapped to a value
-		Map<Integer, String> mapTable = new HashMap<>();
+		Map<String, Integer> carMap = new HashMap<>();
 		
-		//add key, value to the table.
-		mapTable.put(400, "Bad Request");
-		mapTable.put(404, "not Found");
-		mapTable.put(501, "Not Authorized");
-		mapTable.put(405, "Internal Error");
+		//add key, value to the map
+		carMap.put("Audi",5);
+		carMap.put("Ford", 10);
+		carMap.put("Toyota", 8);
+		carMap.put("Chevrolet", 12);
+		carMap.put("Honda", 7);
+		carMap.put("Buick", 4);
+		carMap.put("Mazda", 4);
+		carMap.put("BMW", 6);
+		carMap.put("Mercedes", 2);
 		
-		//check for a value and print the text
-		if(mapTable.containsValue("Internal Error")) {
-			System.out.println("Found Internal Error");
-		}
-	    
-		if(mapTable.containsKey(400)) {
-	    	System.out.println("400: Bad Request");
-	    
-	    	System.out.println(mapTable);
-		}
+		//print out the hashMap
+		System.out.println(carMap);
+		System.out.println("Total Vehicle Types: " + carMap.size());
+		//loop through all the keys and out put the value of that key in a sentance structrue
+		 for(String key: carMap.keySet())
+			 System.out.println("Found " + carMap.get(key) + " " + key + " cars in the Lot.");
+		 
+		 			      
+		 System.out.println();
+		 //using a variable called searchKey it will match like above
+	     String searchKey = "Audi";
+	     // searches the map and verifies if that key exists.	 	
+	     if(carMap.containsKey(searchKey))
+			 		System.out.println("Found " + carMap.get(searchKey) + " " + searchKey + " cars in the lot!\n");
+			          
+
+		
 		
 	    System.out.println();
+
 	    
+//********************************************************************************
 	    //source: https://www.geeksforgeeks.org/queue-interface-java/
 	    
 	    //create new queue
