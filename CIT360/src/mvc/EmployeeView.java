@@ -12,13 +12,13 @@ import javax.swing.table.DefaultTableModel;
 public class EmployeeView extends JFrame {
 
 	
-	 public EmployeeView2() {
+	 public void EmployeeView2() {
 	        
 	    }
 
 	
 	private JPanel contentPane;
-	JTable jTableEmployee;
+	public JTable jTableEmployee;
 
 	/**
 	 * Launch the application.
@@ -51,15 +51,11 @@ public class EmployeeView extends JFrame {
 		jTableEmployee.setModel(new DefaultTableModel(
 			new Object[][] {
 				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
 			},
 			new String[] {
-				"First Name", "Last Name", "Middle Name", "Salary", "Brith Place"
+				"First Name", "Middle Name", "Last Name", "Salary", "BirthPlace"
 			}
 		));
-		jTableEmployee.setToolTipText("");
 		contentPane.add(jTableEmployee, BorderLayout.CENTER);
 	}
 
