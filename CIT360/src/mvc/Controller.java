@@ -20,7 +20,7 @@ public class Controller {
     }
     public void startApplication() {
         // Set table column names
-        String col[] = {"First Name","Middle Name","Last Name", "Date of Birth", 
+        String col[] = {"First Name","Middle Name","Last Name", "Salary", 
            "Place of Birth"};
         
         // Initialize tableModel to populate

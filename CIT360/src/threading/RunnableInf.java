@@ -2,16 +2,16 @@ package threading;
 
 
 
-public class Task extends Thread {
+public class RunnableInf implements Runnable {
 	   private Thread t;
 	   private String threadName;
 	   
-	   Task( String name) {
+	   RunnableInf (String name) {
 	      threadName = name;
 	      System.out.println("Creating " +  threadName );
 	      
 	   }
-	 
+	  
 	   public void run() {
 	      System.out.println("Running " +  threadName );
 	      try {
