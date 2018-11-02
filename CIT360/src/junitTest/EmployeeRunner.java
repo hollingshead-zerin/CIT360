@@ -12,7 +12,15 @@ public class EmployeeRunner {
       for (Failure failure : result.getFailures()) {
          System.out.println(failure.toString());
       }
+      System.out.println("Test One was Succesfull: " + result.wasSuccessful());
+      
+      Result result2 = JUnitCore.runClasses(EmployeeTest.class);
 		
-      System.out.println(result.wasSuccessful());
+      for (Failure failure2 : result2.getFailures()) {
+         System.out.println(failure2.toString());
+      }
+      
+      System.out.println("Test two was successful: " + result2.wasSuccessful());
+      
    }
 } 

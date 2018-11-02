@@ -37,7 +37,7 @@ public class EmployeeTestBad {
       assertNotNull(emp3);
 
       //Check that an object is null
-	  assertNull(emp4);
+	  assertNull(emp3);
 
       //Check if two object references point to the same object
 	  assertSame(emp6, emp5);
